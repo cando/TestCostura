@@ -13,6 +13,11 @@ namespace TestCostura
             var builder = new ContainerBuilder();
             builder.RegisterType<Sample>().As<ISample>();
             var container = builder.Build();
+
+            var a = container.Resolve<ISample>();
+            a.Method();
+
+            Console.ReadLine();
         }
     }
 }
